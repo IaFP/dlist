@@ -65,6 +65,8 @@ library
                         -Wtrustworthy-safe
   if flag(Werror)
     ghc-options:        -Werror
+  if impl(ghc >= 9.0.3)
+       default-extensions: PartialTypeConstructors
 
 test-suite test
   type:                 exitcode-stdio-1.0
@@ -97,3 +99,5 @@ test-suite test
                         -Wtrustworthy-safe
   if flag(Werror)
     ghc-options:        -Werror
+  if impl(ghc >= 9.0.3)
+       default-extensions: PartialTypeConstructors
